@@ -1,6 +1,6 @@
 # Criptografia de Frase
 
-Este é um simples aplicativo web para criptografar e descriptografar frases usando JavaScript. Ele utiliza o servidor embutido do PHP para executar o código.
+Este é um simples aplicativo web para criptografar  frases usando JavaScript. Ele utiliza o servidor embutido do PHP para executar o código.
 
 ## Como Executar
 
