@@ -31,3 +31,11 @@ Isso iniciará o servidor PHP local na porta 8000.
 ## Observações
 
 Certifique-se de que o PHP esteja instalado corretamente e que você tenha permissão para executar o servidor embutido do PHP no diretório onde os arquivos do aplicativo estão localizados.
+
+##Equipe 
+
+- Emanoel Carvalho
+- Cleiton Lucas
+- Ítalo
+- Gean
+- Gabriel
