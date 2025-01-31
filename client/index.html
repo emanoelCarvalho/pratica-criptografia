@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criptografar Frase(Prática Segurança)</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criptografia</title>
 </head>
 <body>
-    <h1>Criptografar Frase</h1>
-    <form id="formCriptografar">
-        <label for="frase">Digite a frase:</label><br>
-        <input type="text" id="frase" name="frase"><br>
-        <button type="submit">Criptografar</button>
-    </form>
-    <div id="resultado"></div>
+  <h1>Criptografar Frase</h1>
+  <form id="formCriptografar">
+    <label for="frase">Digite a frase:</label>
+    <input type="text" id="frase" required />
+    <button type="submit">Criptografar</button>
+  </form>
 
-    <script src="index.js"></script>
+  <h2>Resultado:</h2>
+  <div id="resultado"></div>
+
+  <script>
+    document.getElementById('formCriptografar').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      const frase = document.getElementById('frase').value;
+
+      fetch('/api/criptografar', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ frase }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('resultado').innerText = data.fraseCriptografada;
+      })
+      .catch(error => {
+        console.error('Erro:', error);
+      });
+    });
+  </script>
 </body>
 </html>
