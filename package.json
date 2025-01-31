@@ -4,6 +4,7 @@
   "description": "Este é um simples aplicativo web para criptografar  frases usando JavaScript. Ele utiliza o servidor embutido do PHP para executar o código.",
   "main": "index.js",
   "scripts": {
+    "start": "node /src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

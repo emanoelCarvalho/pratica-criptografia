@@ -1,41 +1,70 @@
+
+---
+
 # Criptografia de Frase
 
-Este é um simples aplicativo web para criptografar  frases usando JavaScript. Ele utiliza o servidor embutido do PHP para executar o código.
+Este é um aplicativo web desenvolvido como parte de uma atividade na disciplina **Segurança de Sistemas**. O projeto utiliza **Express** para criar uma API de criptografia e descriptografia de frases. O frontend é um HTML simples que consome essa API para realizar as operações.
+
+## Funcionalidades
+
+- **Criptografia de Frase**: O usuário pode inserir uma frase e criptografá-la utilizando um algoritmo que combina **Cifra de César** e **embaralhamento** de palavras.
+- **Descriptografia**: A funcionalidade de descriptografia pode ser implementada em uma versão futura, caso desejado.
 
 ## Como Executar
 
-1. Certifique-se de ter o PHP instalado em sua máquina. Você pode verificar digitando o seguinte comando no terminal:
+1. **Instalar o Node.js**: Certifique-se de ter o Node.js instalado em sua máquina. Você pode verificar digitando o seguinte comando no terminal:
 
-php --version
+   ```bash
+   node --version
+   ```
 
-2. Baixe ou clone este repositório em seu computador.
+2. **Instalar dependências do projeto**: Após clonar o repositório, navegue até o diretório do projeto no terminal e execute o seguinte comando para instalar as dependências:
 
-3. Navegue até o diretório onde os arquivos estão localizados usando o terminal.
+   ```bash
+   npm install
+   ```
 
-4. Execute o servidor embutido do PHP com o seguinte comando:
+3. **Rodar o servidor Express**: No diretório do projeto, execute o seguinte comando para iniciar o servidor Express:
 
-php -S localhost:8000
+   ```bash
+   npm start
+   ```
 
+   Isso iniciará o servidor na porta `3000` (ou outra configurada no código).
 
-Isso iniciará o servidor PHP local na porta 8000.
+4. **Acessar o aplicativo**: Abra um navegador da web e acesse `http://localhost:3000` para utilizar o aplicativo de criptografia.
 
-5. Abra um navegador da web e visite `http://localhost:8000` para acessar o aplicativo.
+## Estrutura do Projeto
 
-6. Agora você pode usar o aplicativo para criptografar ou descriptografar frases.
+- **`/src`**: Contém o código do backend (API) utilizando Express.
+  - **`/controllers`**: Lógica para gerenciar as requisições HTTP.
+  - **`/services`**: Contém a lógica de criptografia e embaralhamento.
+  - **`/utils`**: Funções auxiliares, como a remoção de acentos.
+  - **`app.js`**: Arquivo principal que configura o servidor Express.
 
-## Arquivos
+- **`/client`**: Contém o frontend, um simples formulário HTML e o código JavaScript para fazer requisições para a API.
+  - **`index.html`**: Interface do usuário para inserir a frase e exibir o resultado.
+  - **`index.js`**: Arquivo JavaScript para enviar a frase à API e exibir a resposta criptografada.
 
-- `index.html`: O arquivo HTML que contém a interface do usuário.
-- `index.js`: O arquivo JavaScript que contém as funções para criptografar e descriptografar as frases.
+## Dependências
 
-## Observações
+- **Express**: Framework para construir a API.
+- **Body-Parser**: Middleware para parsing de dados JSON nas requisições.
 
-Certifique-se de que o PHP esteja instalado corretamente e que você tenha permissão para executar o servidor embutido do PHP no diretório onde os arquivos do aplicativo estão localizados.
+## Licença
 
-##Equipe 
+Este projeto está licenciado sob a **MIT License**. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
-- Emanoel Carvalho
-- Cleiton Lucas
-- Ítalo
-- Gean
-- Gabriel
+## Contribuidores
+
+- **Emanoel Carvalho** - [LinkedIn](https://www.linkedin.com/in/emanoelcarvalho/)
+- **Gabriel Vinícius** - [LinkedIn](https://www.linkedin.com/in/gabx-vinicius/)
+- **Ítalo Carvalho** - [LinkedIn](https://www.linkedin.com/in/italo-carvalho-96556193/)
+- **Gean de Lima** - [LinkedIn](https://www.linkedin.com/in/gean-de-lima-7909a2251/)
+- **Cleiton Lucas** - [GitHub](https://github.com/CleitonLucas)
+
+## Agradecimentos
+
+Agradecemos à disciplina de **Segurança de Sistemas** pela oportunidade de trabalhar neste projeto prático. A colaboração de todos os membros da equipe foi essencial para o desenvolvimento e sucesso desta aplicação.
+
+---
