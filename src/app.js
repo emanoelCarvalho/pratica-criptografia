@@ -8,7 +8,6 @@ const port = 3000;
 
 app.use(bodyParser.json());
 app.use(cors({ origin: "http://localhost:8080" }));
-app.use(express.static("public"));
 
 app.post("/api/criptografar", criptografiaController.criptografarFrase);
 
