@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const criptografiaController = require("./controllers/criptografiaController");
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
