@@ -15,5 +15,5 @@ document
     });
   });
 
-const data = await response.json();
+const data = response.json();
 document.getElementById("resultado").innerText = data.frase;
