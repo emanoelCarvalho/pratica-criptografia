@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css" />
     <title>Criptografia</title>
   </head>
   <body>
-    <h1>Criptografar Frase</h1>
-    <form id="formCriptografar">
-      <label for="frase">Digite a frase:</label>
-      <input type="text" id="frase" required />
-      <button type="submit">Criptografar</button>
-    </form>
+    <div class="container">
+      <h1>Criptografar Frase</h1>
+      <form id="formCriptografar">
+        <label for="frase">Digite a frase:</label>
+        <input type="text" id="frase" required />
+        <button type="submit">Criptografar</button>
+      </form>
 
-    <h2>Resultado:</h2>
-    <div id="resultado"></div>
-
+      <h2>Resultado:</h2>
+      <div id="resultado"></div>
+    </div>
     <script>
       document
         .getElementById("formCriptografar")
